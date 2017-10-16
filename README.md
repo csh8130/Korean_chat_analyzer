@@ -16,21 +16,20 @@
 
 트위치 형태소 분석기를 사용하여 C#기반으로 작성하였습니다.
 
------
+
 
 > **사용법:**
 > **korean_chat_analyzer.exe 채팅파일.txt**
 > 
-
 > - [00:00:00.078] 닉네임: 채팅내용 으로 이루어진 텍스트문서를 입력파일로 넣어야합니다.
 > - 채팅 파일은 프로젝트에 포함된 example_data.txt 를 참고하세요
 
-----
+
 
 > **usage :**
 > **korean_chat_analyzer.exe chat_file.txt **
 > no option
 
 
------
+
 
