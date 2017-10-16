@@ -147,13 +147,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Line.cs" />
+    <Compile Include="MyToken.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Section.cs" />
+    <Compile Include="Sections.cs" />
     <Compile Include="TwitterKoreanProcessorCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="example_data.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
