@@ -86,6 +86,7 @@ namespace koran_chat_analyzer
 
             sections.nounCount2Text(args[0] + "_noun_count_info.txt");
             Console.WriteLine(args[0] + "_noun_count_info.txt" + " 전체구간에서 명사만 뽑아낸 후 빈도수 측정");
+            Console.WriteLine("temp_for_tensorflow.csv" + "_output.csv에서 한글과 시간정보를 제외한 순수한 딥러닝학습용 데이터");
 
             Console.WriteLine("Done");
         }
