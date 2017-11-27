@@ -111,7 +111,7 @@ namespace koran_chat_analyzer
             StreamWriter sw = new StreamWriter(filename);
             StreamWriter csv = new StreamWriter(argFileName + "_output.csv", false, Encoding.Default);
             csv.WriteLine("전체초,시간,채팅참여자수,채팅횟수,'ㅋㅋ'발생횟수,Noun_count,Space_count,KoreanParticle_count,ProperNoun_count,Verb_count,Josa_count,Punctuation_count,Alpha_count,Number_count");
-
+            StreamWriter csv2 = new StreamWriter("temp_for_tensorflow.csv", false, Encoding.Default);
             int sectionArraySize = sectionArray.Count;
             for (int i = 0; i < sectionArraySize; i++)
             {
@@ -135,10 +135,26 @@ namespace koran_chat_analyzer
                 csv.Write(temp.Alpha_count + ",");
                 csv.Write(temp.Number_count);
                 csv.WriteLine();
+                
+                csv2.Write(temp.getIdCount() + ",");
+                csv2.Write(temp.count + ",");
+                csv2.Write(temp.kk_count + ",");
+                csv2.Write(temp.noun_count + ",");
+
+                csv2.Write(temp.Space_count + ",");
+                csv2.Write(temp.KoreanParticle_count + ",");
+                csv2.Write(temp.ProperNoun_count + ",");
+                csv2.Write(temp.Verb_count + ",");
+                csv2.Write(temp.Josa_count + ",");
+                csv2.Write(temp.Punctuation_count + ",");
+                csv2.Write(temp.Alpha_count + ",");
+                csv2.Write(temp.Number_count);
+                csv2.WriteLine();
             }
 
             sw.Close();
             csv.Close();
+            csv2.Close();
         }
 
         public void totalInfo2Text(string filename)
