@@ -109,7 +109,7 @@ namespace koran_chat_analyzer
         public void sections2Text(string filename, string argFileName)
         {
             StreamWriter sw = new StreamWriter(filename);
-            StreamWriter csv = new StreamWriter(argFileName + "_output.csv", false, Encoding.UTF8);
+            StreamWriter csv = new StreamWriter(argFileName + "_output.csv", false, Encoding.Default);
             csv.WriteLine("전체초,시간,채팅참여자수,채팅횟수,'ㅋㅋ'발생횟수,Noun_count,Space_count,KoreanParticle_count,ProperNoun_count,Verb_count,Josa_count,Punctuation_count,Alpha_count,Number_count");
 
             int sectionArraySize = sectionArray.Count;
